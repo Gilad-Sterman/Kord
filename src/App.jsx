@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom'
+import { Route, HashRouter as Router, Routes, useLocation } from 'react-router-dom'
 import { AppHeader } from './cmps/AppHeader'
 import { Login } from './pages/Login'
 import { Home } from './pages/Home'
