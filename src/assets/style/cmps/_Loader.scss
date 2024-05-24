@@ -1,0 +1,126 @@
+@keyframes lineGrow0 {
+    0% {
+        height: 10px;
+    }
+
+    60% {
+        height: 30px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+@keyframes lineGrow1 {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 40px;
+    }
+}
+
+@keyframes lineGrow2 {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 50px;
+    }
+}
+
+@keyframes lineGrow3 {
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 40px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+.loader {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+
+    .line {
+        width: 5px;
+        height: 10px;
+        background: $loader-grad;
+        border-radius: .25rem;
+    }
+
+    .line:nth-child(1) {
+        animation: lineGrow0 2.2s infinite alternate;
+        animation-delay: 100ms;
+    }
+
+    .line:nth-child(2) {
+        animation: lineGrow3 1.6s infinite alternate;
+        animation-delay: 1500ms;
+    }
+
+    .line:nth-child(4) {
+        animation: lineGrow1 1.1s infinite alternate;
+        animation-delay: 400ms;
+    }
+
+    .line:nth-child(3) {
+        animation: lineGrow2 2s infinite alternate;
+        animation-delay: 600ms;
+    }
+
+    .line:nth-child(5) {
+        animation: lineGrow3 1.8s infinite alternate;
+        animation-delay: 200ms;
+    }
+
+    .line:nth-child(7) {
+        animation: lineGrow1 1.5s infinite alternate;
+        animation-delay: 1.2s;
+    }
+
+    .line:nth-child(6) {
+        animation: lineGrow2 1.9s infinite alternate;
+        animation-delay: 800ms;
+    }
+
+    .line:nth-child(8) {
+        animation: lineGrow3 2s infinite alternate;
+        animation-delay: 950ms;
+    }
+
+    .line:nth-child(9) {
+        animation: lineGrow1 1s infinite alternate;
+        animation-delay: 1.3s;
+    }
+
+    .line:nth-child(10) {
+        animation: lineGrow2 1.7s infinite alternate;
+        animation-delay: 2s;
+    }
+
+    .line:nth-child(11) {
+        animation: lineGrow3 2s infinite alternate;
+        animation-delay: 2s;
+    }
+
+    .line:nth-child(12) {
+        animation: lineGrow2 1.2s infinite alternate;
+        animation-delay: 350ms;
+    }
+
+    .line:nth-child(13) {
+        animation: lineGrow0 1.2s infinite alternate;
+    }
+}

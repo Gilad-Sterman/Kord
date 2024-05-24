@@ -1,0 +1,27 @@
+.catalog-page {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    height: calc(100vh - 240px);
+
+    .btn-back {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: .5rem;
+        transform: rotate(90deg);
+
+        img {
+            filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(937%) hue-rotate(189deg) brightness(100%) contrast(88%);
+        }
+    }
+
+    .track-list {
+        overflow-y: auto;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+}

@@ -1,0 +1,68 @@
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.app-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 80px;
+    padding-inline: 1rem;
+
+    img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .uesr-preview {
+
+        img {
+            border-radius: 50%;
+            filter: none;
+        }
+    }
+
+    .notifications {
+        position: relative;
+
+        img {
+            filter: brightness(0) saturate(100%) invert(83%) sepia(26%) saturate(5064%) hue-rotate(181deg) brightness(102%) contrast(91%);
+        }
+    }
+
+    .settings-icon,
+    .mark-read-icon {
+        img {
+            filter: brightness(0) saturate(100%) invert(83%) sepia(26%) saturate(5064%) hue-rotate(181deg) brightness(102%) contrast(91%);
+        }
+    }
+
+    .notification-count {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -6px;
+        right: -6px;
+        font-weight: bold;
+        width: 24px;
+        height: 24px;
+        background-color: $clr-red;
+        color: $clr-secondary;
+        border-radius: 50%;
+    }
+
+    &.hiden {
+        display: none;
+    }
+}

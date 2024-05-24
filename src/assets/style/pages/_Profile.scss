@@ -1,0 +1,33 @@
+.profile-page {
+    position: relative;
+    padding: 1rem;
+    height: calc(100vh - 240px);
+    // color: $clr-white;
+
+    .btn-back {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: .5rem;
+        transform: rotate(90deg);
+
+        img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(937%) hue-rotate(189deg) brightness(100%) contrast(88%);
+        }
+    }
+
+    .profile-img {
+        border-radius: 50%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    img {
+        width: 150px;
+    }
+}

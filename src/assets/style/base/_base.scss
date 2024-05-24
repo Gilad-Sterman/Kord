@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    // direction: rtl;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Alef', sans-serif;
+    margin: 0;
+    color: $clr-white;
+    background-color: $clr-bg;
+    text-align: start;
+    overflow-x: hidden;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    span {
+        color: $clr-white;
+    }
+}
+
+.light-theme {
+    background-color: $clr-white;
+    color: $clr-bg;
+
+    span {
+        color: $clr-bg;
+    }
+}
+
+.dark-theme {
+    background-color: $clr-bg;
+    color: $clr-gray;
+
+    span {
+        color: $clr-gray;
+    }
+}
+
+.eng {
+    direction: ltr;
+    font-family: 'Jost', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // text-align: center;
+    margin: .5em 0 .5em;
+    // color: $clr-gray;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 30px;
+    line-height: 40px;
+    // color: $clr-gray;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// ::-webkit-scrollbar {
+//     width: 9px;
+//     height: 9px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background: $clr-primary;
+//     border-radius: 0px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     box-shadow: inset 0 0 5px grey;
+//     border-radius: 0px;
+// }
+
+
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object {
+    max-width: 100%
+}
+
+/* Simple and useful CSS Debugging Technique */
+.debug * {
+    outline: 1px solid gold
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0.5em;
+    border: 0;
+    padding: 0.5em 0.8em;
+    border-radius: 4px;
+
+    &:hover {
+        transition: .3s;
+    }
+}
+
+
+input:focus {
+    background-color: #1462af;
+    transition: background-color 1s;
+}

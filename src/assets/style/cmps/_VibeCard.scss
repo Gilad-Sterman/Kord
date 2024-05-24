@@ -1,0 +1,30 @@
+@keyframes vibeAnimation {
+    0% {
+        background-position: 0% 20%;
+    }
+
+    100% {
+        background-position: 0% 80%;
+    }
+}
+
+.vibe-card {
+    padding: 1rem;
+    background: $vibe-grad;
+    border-radius: .25rem;
+    height: 140px;
+    color: $clr-primary;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-size: 100% 150%;
+    animation: vibeAnimation 5s linear infinite alternate;
+
+
+    &:hover {
+        cursor: pointer;
+        animation: vibeAnimation 2s infinite alternate-reverse;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px -1px,
+            rgba(0, 0, 0, 0.14) 0px 4px 2px 0px,
+            rgba(0, 0, 0, 0.12) 0px 1px 2px 0px;
+    }
+}

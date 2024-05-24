@@ -1,0 +1,33 @@
+.square-checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    // margin: 10px 0;
+}
+
+.square-checkbox {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: 2px solid $clr-secondary;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.square-checkbox.checked {
+    background-color: $clr-secondary;
+    border-color: $clr-secondary;
+}
+
+.checkmark {
+    color: #fff;
+    font-size: 18px;
+}
+
+.label {
+    margin-left: 10px;
+    font-size: 16px;
+}

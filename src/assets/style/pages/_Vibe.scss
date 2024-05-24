@@ -1,0 +1,40 @@
+@keyframes bodyAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.vibe-page {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    background: $body-grad;
+    height: calc(100vh - 230px);
+    background-size: 100% 150%;
+    animation: bodyAnimation 5s linear infinite alternate;
+
+    .btn-back {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        transform: rotate(90deg);
+
+        img {
+            filter: invert(11%) sepia(72%) saturate(1319%) hue-rotate(183deg) brightness(94%) contrast(106%);
+        }
+    }
+
+    .track-list {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        height: 50vh;
+        overflow-y: auto;
+    }
+}

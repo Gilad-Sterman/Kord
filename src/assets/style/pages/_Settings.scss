@@ -1,0 +1,52 @@
+.settings-page {
+    position: relative;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+    // color: $clr-white;
+    height: calc(100vh - 240px);
+    overflow-y: auto;
+
+    
+
+    .btn-back {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: .5rem;
+        transform: rotate(90deg);
+
+        img {
+            filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(937%) hue-rotate(189deg) brightness(100%) contrast(88%);
+        }
+    }
+
+    p {
+        margin: 0;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .setting-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+            font-weight: bold;
+        }
+    }
+
+    .user-settings,
+    .notification-settings {
+        display: flex;
+        gap: .5rem;
+        flex-direction: column;
+    }
+
+}

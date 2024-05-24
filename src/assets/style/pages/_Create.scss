@@ -1,0 +1,152 @@
+@keyframes recordingAnimation {
+    0% {
+        scale: 1;
+    }
+
+    25% {
+        scale: 1.1;
+    }
+
+    75% {
+        scale: .95;
+    }
+
+    100% {
+        scale: 1.15;
+    }
+}
+
+.create-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: center;
+    height: calc(100vh - 160px);
+
+    .btn-back {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 1rem;
+        left: .5rem;
+        transform: rotate(90deg);
+
+        img {
+            filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(937%) hue-rotate(189deg) brightness(100%) contrast(88%);
+        }
+    }
+
+    h2 {
+        margin-block: .5rem;
+        margin-top: 1rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+        margin-block: 0;
+    }
+
+    .more-info {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            color: $clr-primary;
+        }
+    }
+
+    .progress-bar {
+        justify-content: space-between;
+
+        .elapsed-time {
+            font-size: 14px;
+        }
+
+        .remaining-time {
+            font-size: 14px;
+        }
+    }
+
+    .btn-record {
+        position: absolute;
+        bottom: -72px;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // margin: auto;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+        background-color: $clr-red;
+        padding: .5rem 1rem;
+        border-radius: .75rem;
+        z-index: 10;
+
+
+        img {
+            width: 36px;
+            height: 36px;
+            filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(937%) hue-rotate(189deg) brightness(100%) contrast(88%);
+        }
+
+        &.recording {
+            background-color: $clr-red;
+            animation: recordingAnimation 2s linear infinite alternate;
+
+            // img {
+            //     filter: invert(79%) sepia(10%) saturate(3979%) hue-rotate(180deg) brightness(98%) contrast(94%);
+            // }
+        }
+    }
+
+    .btn-play-pause,
+    .btn-upload {
+        margin: auto;
+        margin-block: 1rem;
+        padding: 1rem;
+        background-color: $clr-primary-1;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+
+        img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(937%) hue-rotate(189deg) brightness(100%) contrast(88%);
+        }
+    }
+
+
+    .wave-container {
+        position: relative;
+
+        .track-wave {
+            position: absolute;
+            top: 0;
+        }
+
+        .progress-wave {
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    .btn-track-select {
+        position: absolute;
+        top: 1rem;
+        right: .5rem;
+        margin: 0;
+        background-color: $clr-primary;
+        color: $clr-secondary;
+    }
+
+    .track-list {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        height: 50vh;
+        overflow-y: auto;
+    }
+}

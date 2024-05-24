@@ -1,0 +1,85 @@
+.track-filter {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-block: 1rem;
+
+    .search {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        border: 1px solid $clr-secondary;
+        border-radius: 1.5rem;
+        padding: .5rem 1rem;
+
+        img {
+            width: 16px;
+            height: 16px;
+            filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(937%) hue-rotate(189deg) brightness(100%) contrast(88%);
+        }
+
+        input {
+            font-size: 1rem;
+            color: $clr-white;
+            background-color: transparent;
+            border: none;
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $clr-secondary;
+            }
+        }
+    }
+
+    .sort-btn {
+        background-color: $clr-secondary1;
+        display: flex;
+        gap: .25rem;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: .5rem;
+        border-radius: .25rem;
+        color: $clr-secondary-1;
+        font-weight: bold;
+        width: 90px;
+
+        img {
+            filter: invert(79%) sepia(10%) saturate(3979%) hue-rotate(180deg) brightness(98%) contrast(94%);
+
+            &.open {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    .sort-options {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 2;
+        text-align: start;
+        padding: .5rem;
+        border-radius: .25rem;
+        background-color: $clr-secondary-1;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+            rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+            rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+
+        .sort-option {
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+            color: $clr-primary1;
+            font-weight: bold;
+
+            img {
+                width: 16px;
+                filter: invert(11%) sepia(72%) saturate(1319%) hue-rotate(183deg) brightness(94%) contrast(106%);
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+@keyframes trackAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 90% 50%;
+    }
+}
+
+
+.track-preview {
+    display: flex;
+    align-items: end;
+    gap: .5rem;
+    padding: .5rem;
+    color: $clr-secondary-1;
+    min-width: 100px;
+    background: $track-grad;
+    border-radius: .25rem;
+    background-size: 200% 100%;
+    animation: trackAnimation 3s linear infinite alternate;
+
+    .img-container {
+        position: relative;
+        width: 50px;
+        height: 50px;
+
+        .track-img {
+            width: 100%;
+            height: 100%;
+            border-radius: .25rem;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+                rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+                rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+
+        }
+
+        .pip-img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            filter: invert(79%) sepia(10%) saturate(3979%) hue-rotate(180deg) brightness(98%) contrast(94%);
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        width: 92px;
+        font-size: 14px;
+    }
+
+    .more-info {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        color: darken($color: $clr-secondary, $amount: 10%);
+
+        .dry-info {
+            display: flex;
+            gap: 1rem;
+
+            .tags {
+                width: 86px;
+                text-align: start;
+
+                @media (max-width: 500px) {
+                    display: none;
+                }
+            }
+        }
+
+        img {
+            filter: invert(79%) sepia(10%) saturate(3979%) hue-rotate(180deg) brightness(98%) contrast(94%);
+        }
+
+        // width: 60%;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    &:hover {
+        cursor: pointer;
+        animation: trackAnimation 2s linear infinite alternate-reverse;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+            rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+            rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+
+        .img-container {
+            .pip-img {
+                display: block;
+            }
+        }
+    }
+
+    .pip-img {
+        &.curr-song {
+            display: block;
+        }
+    }
+
+    &.curr-song {
+        background: $curr-track-grad;
+        animation: trackAnimation 1s linear infinite alternate;
+    }
+}
+
+.playing-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .15rem;
+    padding: .25rem;
+    color: $clr-secondary-1;
+    width: 85px;
+
+    .track-img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .info {
+        text-align: start;
+        font-size: smaller;
+
+        span {
+            width: max-content;
+        }
+    }
+}
