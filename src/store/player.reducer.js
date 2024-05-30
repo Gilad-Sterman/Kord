@@ -13,7 +13,7 @@ const initialState = {
     tracks: [],
     nextSong: undefined,
     prevSong: undefined,
-    isPlaying: true,
+    isPlaying: false,
     songProgress: 0
 }
 

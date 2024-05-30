@@ -30,4 +30,14 @@
     img {
         width: 150px;
     }
+
+    .user-clips {
+        list-style: none;
+        padding: 0;
+
+        .my-track {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }

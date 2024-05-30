@@ -42,6 +42,8 @@
 
     .settings-icon,
     .mark-read-icon {
+        padding: 0;
+        margin: 0;
         img {
             filter: brightness(0) saturate(100%) invert(83%) sepia(26%) saturate(5064%) hue-rotate(181deg) brightness(102%) contrast(91%);
         }

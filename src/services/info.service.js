@@ -1,9 +1,11 @@
 import { httpService } from "./http.service"
 
 export const userMsgs = [
+  { _id: 3, type: 'comment', user: 'User2', title: 'New comment', content: '@Ye Commented: "Great post!"', timestamp: 1716388707929, isRead: false },
+  { _id: 2, type: 'like', user: 'User1', title: 'New like', content: '@G-Soft Liked your post', timestamp: 1716388907929, isRead: true },
+  { _id: 4, type: 'follow', user: 'User3', title: 'New follower', content: '@badgirlriri started followng you', timestamp: 1716388737929, isRead: false },
+  { _id: 5, type: 'comment', user: 'User6', title: 'New comment', content: '@BS Commented: "Amazing post man!"', timestamp: 1716388707929, isRead: false },
   { _id: 1, type: 'welcome', user: 'Kord', title: 'Welcome to Kord!', content: 'Hey user! thank you for joining our platform! We hope you enjoy, find content you love and create amazing audio clips using our simple interface.', timestamp: 1716384707929, isRead: true },
-  { _id: 2, type: 'like', user: 'User1', title: 'New like', content: 'Liked your post', timestamp: 1716388907929, isRead: false },
-  { _id: 3, type: 'comment', user: 'User2', title: 'New comment', content: 'Commented: "Great post!"', timestamp: 1716388707929, isRead: false },
 ]
 
 export const topTracks = [
@@ -18,7 +20,9 @@ export const topTracks = [
     likes: 120,
     comments: [
       { userId: '201', comment: 'Love this track!', timestamp: '2024-05-01T12:00:00Z' },
-      { userId: '202', comment: 'Great beats!', timestamp: '2024-05-02T14:30:00Z' }
+      { userId: '202', comment: 'Great beats!', timestamp: '2024-05-02T14:30:00Z' },
+      { userId: '203', comment: 'Amazing beats!', timestamp: '2024-05-02T14:30:00Z' },
+      { userId: '204', comment: 'Coll vibe!', timestamp: '2024-05-02T14:30:00Z' }
     ],
     shares: 45,
     duration: 225, // 3 minutes 45 seconds
@@ -38,15 +42,14 @@ export const topTracks = [
     title: 'Morning Motivation',
     likes: 85,
     comments: [
-      { userId: '203', comment: 'Very inspiring!', timestamp: '2024-05-02T08:00:00Z' },
-      { userId: '204', comment: 'Perfect for my morning routine!', timestamp: '2024-05-03T07:45:00Z' }
+      { userId: '203', comment: 'Very inspiring!', timestamp: '2024-05-02T08:00:00Z' }
     ],
     shares: 30,
     duration: 320, // 5 minutes 20 seconds
     createdAt: '2024-05-02T07:00:00Z',
     tags: ['motivation', 'morning', 'podcast'],
     audioUrl: 'https://res.cloudinary.com/dollaguij/video/upload/v1706129139/ara_m8rxmz.mp3',
-    thumbnailUrl: 'https://res.cloudinary.com/dollaguij/image/upload/v1706462535/IMG_0899_ekjlpb.jpg',
+    thumbnailUrl: 'https://res.cloudinary.com/dollaguij/image/upload/v1699295035/fl78dgtgbeyxsh0tti8j.jpg',
     visualUrl: ''
   },
   {
@@ -81,7 +84,8 @@ export const topTracks = [
     likes: 95,
     comments: [
       { userId: '207', comment: 'So relaxing!', timestamp: '2024-05-04T19:00:00Z' },
-      { userId: '208', comment: 'Perfect end to my day!', timestamp: '2024-05-04T20:30:00Z' }
+      { userId: '208', comment: 'Perfect end to my day!', timestamp: '2024-05-04T20:30:00Z' },
+      { userId: '204', comment: 'Perfect for my morning routine!', timestamp: '2024-05-03T07:45:00Z' }
     ],
     shares: 35,
     duration: 245, // 4 minutes 5 seconds
@@ -147,7 +151,25 @@ export const loggedUser = {
       audioUrl: 'https://res.cloudinary.com/dollaguij/video/upload/v1706127130/Together_AloneG1_lwkq4d.mp3',
       thumbnailUrl: 'https://res.cloudinary.com/dollaguij/image/upload/v1706125106/IMG_0892_x8ohhb.jpg',
       visualUrl: ''
-    }
+    },
+    {
+      _id: '6',
+      user: {
+        _id: '104',
+        username: 'kinGilad',
+        profilePicUrl: 'https://res.cloudinary.com/dollaguij/image/upload/v1699289291/prof_pp9uf5.jpg'
+      },
+      title: 'chill beat',
+      likes: 35,
+      comments: [],
+      shares: 35,
+      duration: 175, 
+      createdAt: '2024-05-09T18:00:00Z',
+      tags: ['beat', 'chill', 'hip hop'],
+      audioUrl: 'https://res.cloudinary.com/dollaguij/video/upload/v1706127130/Together_AloneG1_lwkq4d.mp3',
+      thumbnailUrl: 'https://res.cloudinary.com/dollaguij/image/upload/v1706125106/IMG_0892_x8ohhb.jpg',
+      visualUrl: ''
+    },
   ],
   likedTracks: [
     "track3",

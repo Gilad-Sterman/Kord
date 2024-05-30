@@ -4,6 +4,14 @@ import { loggedUser } from "../services/info.service"
 export function Profile({ selected, setSelected }) {
     const navigate = useNavigate()
 
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60)
+        const sec = seconds % 60
+        const secs = sec >= 10 ? sec : `0${sec}`
+
+        return `${minutes}:${secs}`
+    }
+
     return (
         <section className="profile-page">
             <button className="btn-back" onClick={() => navigate('/')}>
@@ -23,8 +31,9 @@ export function Profile({ selected, setSelected }) {
             <h4>My Clips</h4>
             <ul className="user-clips">
                 {loggedUser.createdTracks.map(track =>
-                    <li className="my-tracks" key={track._id}>
+                    <li className="my-track" key={track._id}>
                         <span>{track.title}</span>
+                        <span>{formatTime(track.duration)}</span>
                     </li>)}
             </ul>
         </section>

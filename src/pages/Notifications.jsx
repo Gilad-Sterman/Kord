@@ -9,7 +9,10 @@ export function Notifications({ selected, setSelected }) {
             <button className="btn-back" onClick={() => navigate('/')}>
                 <img src="https://res.cloudinary.com/dollaguij/image/upload/v1701785794/wednesday/bwudwrzkha2pdcy3ga7q.svg" alt="" />
             </button>
-            <h3>Notifications</h3>
+            <div className='top'>
+                <h3>Notifications</h3>
+                <img src="https://res.cloudinary.com/dollaguij/image/upload/v1716307162/icons/kord/bell_sc1whj.png" alt="bell-icon" />
+            </div>
             <ul className="inbox">
                 {userMsgs.map(msg =>
                     <li key={msg._id} className={msg.isRead ? 'read' : 'unread'}>

@@ -16,6 +16,13 @@ export function Home() {
         if (newIdx === topTracks.length) newIdx = 0
         setCurrSong(topTracks[newIdx])
     }
+    
+    const prev = () => {
+        const idx = topTracks.findIndex(track => track._id === currTrack._id)
+        let newIdx = idx - 1
+        if (newIdx < 0) newIdx = topTracks.length - 1
+        setCurrSong(topTracks[newIdx])
+    }
 
     return (
         <section className='home' >
@@ -26,8 +33,8 @@ export function Home() {
                 <span onClick={() => setSelected('following')}>Following</span>
                 <span className="current">For You</span>
             </div>}
-            <div className="visual-content" onClick={() => next()}>
-                <div className={`sound-wave-container ${isPlaying ? 'playing' : ''}`}>
+            <div className="visual-content">
+                <div className={`sound-wave-container ${isPlaying ? 'playing' : ''}`} onClick={() => next()}>
                     <div className="sound-wave"></div>
                     <div className="sound-wave"></div>
                     <div className="sound-wave"></div>
@@ -39,7 +46,7 @@ export function Home() {
                 </div>
                 {currTrack.visualUrl && <iframe src={currTrack.visualUrl} width="300" height="300" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>}
                 {!currTrack.visualUrl && <img src={currTrack.thumbnailUrl} alt="track-img" className="track-img" />}
-                <div className={`sound-wave-container ${isPlaying ? 'playing' : ''}`}>
+                <div className={`sound-wave-container ${isPlaying ? 'playing' : ''}`} onClick={() => prev()}>
                     <div className="sound-wave"></div>
                     <div className="sound-wave"></div>
                     <div className="sound-wave"></div>
